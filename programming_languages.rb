@@ -29,7 +29,7 @@ end
 
 merged_hash = oo_hash.merge(functional_hash)
 
-merged_hash[:javascript] = {style: [:oo,:functional]}
+merged_hash[:javascript] = {type: "interpreted", style: [:oo,:functional]}
 
 merged_hash
 end
