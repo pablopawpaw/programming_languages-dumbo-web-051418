@@ -1,36 +1,4 @@
 def reformat_languages(languages)
-languages = {
-  :oo => {
-    :ruby => {
-      :type => "interpreted"
-    },
-    :javascript => {
-      :type => "interpreted"
-    },
-    :python => {
-      :type => "interpreted"
-    },
-    :java => {
-      :type => "compiled"
-    }
-  },
-  :functional => {
-    :clojure => {
-      :type => "compiled"
-    },
-    :erlang => {
-      :type => "compiled"
-    },
-    :scala => {
-      :type => "compiled"
-    },
-    :javascript => {
-      :type => "interpreted"
-    }
- 
-  }
-}
-
 #new hash 
 #add wanted components of orig hash to new hash 
 #add the last style key value pair 
@@ -56,7 +24,7 @@ functional.each do |lang, type|
 end 
 
 functional_hash.each do |lang, type|
-  type[:style] = [:oo]
+  type[:style] = [:functional]
 end 
 
 merged_hash = oo_hash.merge(functional_hash)
